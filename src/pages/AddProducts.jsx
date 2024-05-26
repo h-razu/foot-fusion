@@ -24,7 +24,6 @@ const AddProducts = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        form.reset();
         toast.success("Product Add Successful");
       });
   };
@@ -87,7 +86,7 @@ const AddProducts = () => {
             <input
               className="btn mt-4 w-full bg-red-500 text-white p-4"
               type="submit"
-              value="Add product"
+              value="Add Product"
             />
           </div>
         </form>
