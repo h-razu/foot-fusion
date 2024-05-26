@@ -18,14 +18,27 @@ const SingleProductCardDashboard = ({ shoe, onDelete }) => {
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
-      <figure>
-        <img src={image_url} alt="Shoes" />
-      </figure>
+      <div className="h-96 w-full">
+        <img
+          className="rounded-t-lg h-full w-full object-cover"
+          src={image_url}
+          alt="product image"
+        />
+      </div>
       <div className="card-body">
-        <h2 className="card-title">{title}</h2>
-        <h3 className="text-xl font-semibold">{brand}</h3>
-        <h3 className="text-xl font-semibold">{price}</h3>
-        <p>{description}</p>
+        <div className="flex items-center gap-2">
+          <h5 className="text-2xl font-bold tracking-tight text-gray-900">
+            {title}
+          </h5>
+          <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+            {brand}
+          </span>
+        </div>
+
+        <div>
+          <span className="text-2xl font-bold text-gray-900">${price}</span>
+        </div>
+        <p className="text-gray-600">{description}</p>
         <div className="card-actions justify-end">
           <button className="btn bg-indigo-500 text-white">
             <Link to={`/products/${id}`}>See details</Link>

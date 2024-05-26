@@ -6,9 +6,13 @@ const SingleProduct = ({ shoe }) => {
 
   return (
     <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-      <figure>
-        <img className="rounded-t-lg" src={image_url} alt="product image" />
-      </figure>
+      <div className="h-96 w-full">
+        <img
+          className="rounded-t-lg h-full w-full object-cover"
+          src={image_url}
+          alt="product image"
+        />
+      </div>
 
       <div className="p-3">
         <div className="flex items-center mt-2.5 mb-5 gap-2">
